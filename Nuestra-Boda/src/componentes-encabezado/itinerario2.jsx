@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Itinerario2 = () => {
-
   const fadeUp = {
     hidden: {
       opacity: 0,
@@ -17,39 +16,8 @@ const Itinerario2 = () => {
     },
   };
 
-  const eventosIzquierda = [
-    {
-      titulo: "Fotografías",
-      imagen: "/camara-fotografica.png",
-      hora: "4:00 pm - 4:30 pm",
-    },
-    {
-      titulo: "Comida",
-      imagen: "/cena-romantica.png",
-      hora: "5:00 pm - 6:00 pm",
-    },
-    {
-      titulo: "Baile",
-      imagen: "/bola-de-disco.png",
-      hora: "6:30 pm - 11:30 pm",
-    },
-  ];
-
-  const eventosDerecha = [
-    {
-      titulo: "Llegada de Novios",
-      imagen: "/arco-de-la-boda.png",
-      hora: "4:30 pm - 5:00 pm",
-    },
-    {
-      titulo: "Pastel",
-      imagen: "/pastel.png",
-      hora: "6:00 pm - 6:30 pm",
-    },
-  ];
-
   return (
-    <div className="w-full bg-[#F7F4ED] py-0 px-0 flex items-center justify-center overflow-hidden">
+    <div className="w-full bg-[#496985] py-20 px-6 flex items-center justify-center overflow-hidden">
 
       {/* CONTENEDOR */}
       <motion.div
@@ -59,15 +27,19 @@ const Itinerario2 = () => {
         viewport={{ once: true }}
         className="
           max-w-6xl mx-auto
-          bg-[#F7F4ED]
+          bg-white
           rounded-tl-[4rem]
           rounded-br-[4rem]
           rounded-tr-[1rem]
           rounded-bl-[1rem]
           shadow-[0_15px_50px_rgba(0,0,0,0.2)]
           p-10 sm:p-16
+          relative
+          overflow-hidden
         "
       >
+
+        <div className="absolute inset-0 bg-gradient-to-br from-[#F4E681]/20 via-transparent to-[#496985]/10 pointer-events-none"></div>
 
         {/* TÍTULO */}
         <motion.div
@@ -75,120 +47,99 @@ const Itinerario2 = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="relative text-center"
         >
-
-          <p className="uppercase tracking-[0.25em] text-[#B89B5E] text-sm font-semibold">
+          <p className="uppercase tracking-[0.25em] text-[#C45A00] text-sm font-semibold">
             Nuestro Día
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-playfair text-black mt-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-playfair text-[#496985] mt-4">
             Itinerario
           </h1>
 
-          <div className="w-24 h-[2px] bg-[#B89B5E] mx-auto mt-6"></div>
-
+          <div className="w-24 h-[2px] bg-[#C45A00] mx-auto mt-6"></div>
         </motion.div>
 
-        {/* TIMELINE */}
-        <div className="relative mt-20">
+        {/* FOTO + TARJETA */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="
+            mt-14
+            grid grid-cols-1 lg:grid-cols-2
+            gap-8
+            items-center
+          "
+        >
 
-          {/* Línea central desktop */}
-          <div className="hidden md:block absolute left-1/2 top-0 h-full w-[3px] bg-[#B89B5E]/40 -translate-x-1/2"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
+          {/* TARJETA */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="
+              relative
+              bg-[#F4E681]/20
+              backdrop-blur-md
+              rounded-3xl
+              p-8 sm:p-10
+              shadow-lg
+              border border-[#F4E681]
+              text-center
+            "
+          >
 
-            {/* IZQUIERDA */}
-            <div className="flex flex-col gap-14">
+            <div className="absolute top-5 left-1/2 -translate-x-1/2 w-24 h-[2px] bg-[#C45A00]"></div>
 
-              {eventosIzquierda.map((evento, index) => (
+            <img
+              src="/arco-de-la-boda.png"
+              alt="Ceremonia Civil"
+              className="h-20 w-20 md:h-24 md:w-24 mx-auto mt-6"
+            />
 
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="
-                    bg-white/70
-                    backdrop-blur-md
-                    rounded-3xl
-                    p-6
-                    shadow-lg
-                    border border-[#E6DDCF]
-                    text-center
-                    hover:scale-[1.02]
-                    transition duration-300
-                  "
-                >
+            <h2 className="mt-6 text-3xl sm:text-4xl font-playfair text-[#496985]">
+              Ceremonia Civil
+            </h2>
 
-                  <img
-                    src={evento.imagen}
-                    alt={evento.titulo}
-                    className="h-20 w-20 md:h-24 md:w-24 mx-auto"
-                  />
+            <p className="mt-4 text-[#C45A00] font-[DancingScript] text-2xl sm:text-3xl">
+              2:30 pm
+            </p>
 
-                  <h2 className="mt-5 text-2xl font-playfair text-black">
-                    {evento.titulo}
-                  </h2>
+            <p className="mt-5 text-[#496985]/75 text-base sm:text-lg leading-relaxed max-w-md mx-auto">
+              Se les agradece la puntualidad para poder iniciar la ceremonia
+              acompañados de nuestros seres queridos.
+            </p>
 
-                  <p className="mt-3 text-[#B89B5E] font-[DancingScript] text-xl">
-                    {evento.hora}
-                  </p>
+            <div className="w-24 h-[2px] bg-[#C45A00] mx-auto mt-8"></div>
 
-                </motion.div>
+          </motion.div>
+          {/* FOTO */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="
+              h-[350px]
+              md:h-[450px]
+              rounded-tl-[3rem]
+              rounded-br-[3rem]
+              overflow-hidden
+              shadow-lg
+            "
+          >
+            <img
+              src="/03.JPEG"
+              alt="Ceremonia Civil"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
 
-              ))}
-
-            </div>
-
-            {/* DERECHA */}
-            <div className="flex flex-col gap-14 md:mt-20">
-
-              {eventosDerecha.map((evento, index) => (
-
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="
-                    bg-white/70
-                    backdrop-blur-md
-                    rounded-3xl
-                    p-6
-                    shadow-lg
-                    border border-[#E6DDCF]
-                    text-center
-                    hover:scale-[1.02]
-                    transition duration-300
-                  "
-                >
-
-                  <img
-                    src={evento.imagen}
-                    alt={evento.titulo}
-                    className="h-20 w-20 md:h-24 md:w-24 mx-auto"
-                  />
-
-                  <h2 className="mt-5 text-2xl font-playfair text-black">
-                    {evento.titulo}
-                  </h2>
-
-                  <p className="mt-3 text-[#B89B5E] font-[DancingScript] text-xl">
-                    {evento.hora}
-                  </p>
-
-                </motion.div>
-
-              ))}
-
-            </div>
-
-          </div>
-
-        </div>
+        </motion.div>
 
       </motion.div>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Celebracion = ({
   dia,
@@ -11,31 +12,59 @@ const Celebracion = ({
   titulo,
 }) => {
   return (
-    <div className="w-full bg-[#5E6650] py-20 px-6 flex flex-col items-center justify-center">
+    <div className="w-full bg-[#496985] py-20 px-6 flex flex-col items-center justify-center">
 
       {/* FECHA */}
-      <div className="text-center mb-10">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="text-center mb-10"
+      >
 
-        <p className="text-[#E7D7B1] tracking-[0.35em] uppercase text-sm sm:text-base font-semibold">
+        <motion.p
+          initial={{ opacity: 0, letterSpacing: "0.6em" }}
+          whileInView={{ opacity: 1, letterSpacing: "0.35em" }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-[#F4E681] tracking-[0.35em] uppercase text-sm sm:text-base font-semibold"
+        >
           {dia}
-        </p>
+        </motion.p>
 
-        <h1 className="text-7xl sm:text-8xl font-playfair text-[#F7F4ED] leading-none mt-3 drop-shadow-lg">
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.85 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-7xl sm:text-8xl font-playfair text-white leading-none mt-3 drop-shadow-lg"
+        >
           {fecha}
-        </h1>
+        </motion.h1>
 
-        <p className="text-[#E7D7B1] text-2xl sm:text-3xl tracking-[0.2em] mt-3">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.35 }}
+          viewport={{ once: true }}
+          className="text-[#F4E681] text-2xl sm:text-3xl tracking-[0.2em] mt-3"
+        >
           {mesAnio}
-        </p>
+        </motion.p>
 
-      </div>
+      </motion.div>
 
       {/* TARJETA */}
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 70, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 1.1, delay: 0.2 }}
+        viewport={{ once: true }}
         className="
-          relative bg-[#F7F4ED] max-w-xl w-full p-10 sm:p-14
+          relative bg-white max-w-xl w-full p-10 sm:p-14
           shadow-[0_15px_50px_rgba(0,0,0,0.25)]
-          border border-[#d8cfbf]
+          border border-[#F4E681]
 
           rounded-tl-[4rem]
           rounded-br-[4rem]
@@ -44,63 +73,102 @@ const Celebracion = ({
         "
       >
 
-        <div className="absolute top-5 left-1/2 -translate-x-1/2 w-28 h-[2px] bg-[#B89B5E]"></div>
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: "7rem" }}
+          transition={{ duration: 1, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="absolute top-5 left-1/2 -translate-x-1/2 h-[2px] bg-[#C45A00]"
+        />
 
         <div className="text-center space-y-3">
 
-          <h2 className="text-3xl sm:text-4xl font-playfair text-black tracking-wide">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.45 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl font-playfair text-[#496985] tracking-wide"
+          >
             {titulo}
-          </h2>
+          </motion.h2>
 
-          <div className="w-20 h-[2px] mx-auto bg-[#B89B5E]"></div>
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "5rem" }}
+            transition={{ duration: 1, delay: 0.7 }}
+            viewport={{ once: true }}
+            className="h-[2px] mx-auto bg-[#C45A00]"
+          />
 
         </div>
 
         <div className="mt-10 flex flex-col items-center text-center space-y-6">
 
-          <div>
-            <p className="text-[#B89B5E] uppercase tracking-[0.25em] text-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-[#C45A00] uppercase tracking-[0.25em] text-sm">
               Hora
             </p>
 
-            <p className="text-2xl font-cursiveDancing text-black mt-2">
+            <p className="text-2xl font-cursiveDancing text-[#496985] mt-2">
               {hora}
             </p>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.75 }}
+            viewport={{ once: true }}
+          >
 
-            <p className="text-[#B89B5E] uppercase tracking-[0.25em] text-sm">
+            <p className="text-[#C45A00] uppercase tracking-[0.25em] text-sm">
               Lugar
             </p>
 
-            <p className="text-2xl font-cursiveDancing text-black mt-2">
+            <p className="text-2xl font-cursiveDancing text-[#496985] mt-2">
               {lugar}
             </p>
 
-            <p className="text-black/70 mt-3 leading-relaxed text-sm sm:text-base max-w-md">
+            <p className="text-[#496985]/70 mt-3 leading-relaxed text-sm sm:text-base max-w-md">
               {direccion}
             </p>
 
-          </div>
+          </motion.div>
 
-          <a
+          <motion.a
             href={ubicacion}
             target="_blank"
             rel="noreferrer"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            viewport={{ once: true }}
             className="
-              mt-4 bg-[#B89B5E] hover:scale-105 transition duration-300
+              mt-4 bg-[#C45A00] transition duration-300
               text-white px-8 py-3 rounded-full shadow-lg tracking-wide
             "
           >
             Ver Ubicación
-          </a>
+          </motion.a>
 
         </div>
 
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-28 h-[2px] bg-[#B89B5E]"></div>
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: "7rem" }}
+          transition={{ duration: 1, delay: 1 }}
+          viewport={{ once: true }}
+          className="absolute bottom-5 left-1/2 -translate-x-1/2 h-[2px] bg-[#C45A00]"
+        />
 
-      </div>
+      </motion.div>
     </div>
   );
 };

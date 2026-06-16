@@ -2,9 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Novios = () => {
-
   return (
-    <div className="w-full bg-[#F7F4ED] py-20 px-6 flex items-center justify-center overflow-hidden">
+    <div className="w-full bg-[#496985] py-20 px-6 flex items-center justify-center overflow-hidden">
 
       <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -27,7 +26,7 @@ const Novios = () => {
       >
 
         {/* Glow elegante */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#E7D7B1]/20 via-transparent to-[#B89B5E]/10 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#F4E681]/20 via-transparent to-[#AFCBE8]/20 pointer-events-none"></div>
 
         {/* Texto superior */}
         <motion.p
@@ -37,7 +36,7 @@ const Novios = () => {
           viewport={{ once: true }}
           className="
             uppercase
-            text-[#B89B5E]
+            text-[#496985]
             tracking-[0.2em]
             text-xs sm:text-sm
             font-semibold
@@ -56,11 +55,11 @@ const Novios = () => {
             mt-10
             text-4xl sm:text-5xl md:text-6xl
             font-playfair
-            text-black
+            text-[#496985]
             leading-tight
           "
         >
-          Allison Martinez Sanchez
+          Melissa del Rosario Ramírez Torres
         </motion.h1>
 
         <motion.p
@@ -71,7 +70,7 @@ const Novios = () => {
           className="
             my-6
             text-4xl sm:text-5xl
-            text-[#B89B5E]
+            text-[#C45A00]
             font-[DancingScript]
           "
         >
@@ -86,11 +85,11 @@ const Novios = () => {
           className="
             text-4xl sm:text-5xl md:text-6xl
             font-playfair
-            text-black
+            text-[#496985]
             leading-tight
           "
         >
-          David Hernandez Salazar
+          Miguel Orlando Martínez Cabrera
         </motion.h1>
 
         {/* Línea */}
@@ -99,7 +98,7 @@ const Novios = () => {
           whileInView={{ width: "7rem" }}
           transition={{ duration: 1, delay: 0.6 }}
           viewport={{ once: true }}
-          className="h-[2px] bg-[#B89B5E] mx-auto mt-10"
+          className="h-[2px] bg-[#C45A00] mx-auto mt-10"
         />
 
         {/* Texto bendición */}
@@ -111,99 +110,91 @@ const Novios = () => {
           className="
             mt-10
             text-xl sm:text-2xl
-            text-black/70
+            text-[#496985]/80
             font-[DancingScript]
             leading-relaxed
           "
         >
-          Con la bendición de nuestros padres
+          Con el amor de nuestros Familias
         </motion.p>
 
         {/* Padres */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-14">
 
-          {/* Padres novio */}
+          {/* Familia 1 */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1 }}
             viewport={{ once: true }}
             className="
-              bg-[#F7F4ED]
+              bg-[#F4E681]/20
               rounded-3xl
               p-8
               shadow-md
             "
           >
 
-            <h2 className="
-              text-[#B89B5E]
-              uppercase
-              tracking-[0.2em]
-              text-sm
-              mb-6
-            ">
-              Padres del Novio
+            <h2
+              className="
+                text-[#C45A00]
+                uppercase
+                tracking-[0.2em]
+                text-lg
+                mb-6
+              "
+            >
+              Familia
             </h2>
 
-            <p className="
-              text-2xl
-              font-playfair
-              text-black
-            ">
-              Gael Hernandez
-            </p>
-
-            <p className="
-              mt-3
-              text-2xl
-              font-playfair
-              text-black
-            ">
-              Marta Salazar
+            <p
+              className="
+                mt-3
+                text-2xl
+                font-playfair
+                text-[#496985]
+              "
+            >
+              Ramírez Torres
             </p>
 
           </motion.div>
 
-          {/* Padres novia */}
+          {/* Familia 2 */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
             viewport={{ once: true }}
             className="
-              bg-[#F7F4ED]
+              bg-[#F4E681]/20
               rounded-3xl
               p-8
               shadow-md
             "
           >
 
-            <h2 className="
-              text-[#B89B5E]
-              uppercase
-              tracking-[0.2em]
-              text-sm
-              mb-6
-            ">
-              Padres de la Novia
+            <h2
+              className="
+                text-[#C45A00]
+                uppercase
+                tracking-[0.2em]
+                text-lg
+                mb-6
+              "
+            >
+              Familia
             </h2>
 
-            <p className="
-              text-2xl
-              font-playfair
-              text-black
-            ">
-              Jose Martinez
-            </p>
-
-            <p className="
-              mt-3
-              text-2xl
-              font-playfair
-              text-black
-            ">
-              Karla Sanchez
+            <p
+              className="
+                mt-3
+                text-2xl
+                font-playfair
+                text-[#496985]
+              "
+            >
+              Martínez Cabrera
             </p>
 
           </motion.div>

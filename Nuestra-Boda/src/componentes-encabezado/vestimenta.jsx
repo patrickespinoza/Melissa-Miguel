@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Vestimenta = () => {
-
   const fadeUp = {
     hidden: {
       opacity: 0,
@@ -18,7 +17,7 @@ const Vestimenta = () => {
   };
 
   return (
-    <div className="w-full bg-[#F7F4ED] py-2 px-0 flex items-center justify-center overflow-hidden">
+    <div className="w-full bg-[#496985] py-16 sm:py-20 px-4 sm:px-6 flex items-center justify-center overflow-hidden">
 
       <motion.div
         variants={fadeUp}
@@ -46,26 +45,29 @@ const Vestimenta = () => {
           viewport={{ once: true }}
           className="
             relative
-            h-[280px]
-            sm:h-[420px]
-            md:h-[500px]
+            h-[420px]
+            min-[390px]:h-[460px]
+            sm:h-[520px]
+            md:h-[600px]
             lg:h-full
-            min-h-[300px]
+            min-h-[420px]
           "
         >
 
           <img
-            src="/dress-code2.png"
+            src="/Vestimenta.JPEG"
             alt="Vestimenta"
             className="
               w-full h-full
-              object-cover
+              object-contain
+              lg:object-cover
               object-center
+              bg-white
             "
           />
 
           {/* Overlay elegante */}
-          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="absolute inset-0 bg-[#496985]/5 lg:bg-[#496985]/10"></div>
 
         </motion.div>
 
@@ -90,7 +92,7 @@ const Vestimenta = () => {
               text-[11px]
               sm:text-sm
               tracking-[0.2em]
-              text-[#B89B5E]
+              text-[#C45A00]
               font-semibold
             "
           >
@@ -108,12 +110,12 @@ const Vestimenta = () => {
               md:text-5xl
               lg:text-6xl
               font-playfair
-              text-black
+              text-[#496985]
               mt-5
               leading-tight
             "
           >
-            Vestimenta Formal
+            Vestimenta Formal y Elegante
           </motion.h1>
 
           <motion.div
@@ -121,7 +123,7 @@ const Vestimenta = () => {
             whileInView={{ width: "6rem" }}
             transition={{ duration: 1, delay: 0.4 }}
             viewport={{ once: true }}
-            className="h-[2px] bg-[#B89B5E] mt-6"
+            className="h-[2px] bg-[#C45A00] mt-6"
           />
 
           <motion.p
@@ -134,33 +136,17 @@ const Vestimenta = () => {
               text-base
               sm:text-lg
               md:text-xl
-              text-black/70
+              text-[#496985]/80
               leading-relaxed
               max-w-md
               font-[DancingScript]
             "
           >
-            Queremos compartir contigo una noche elegante y especial.
-            Te invitamos a asistir con vestimenta formal para celebrar
-            juntos este momento inolvidable.
+            No es necesario portar traje completo ni vestido de gala.
+            Te invitamos a vestir de manera formal y elegante.
+            Reservamos los tonos blanco, negro y similares.
+            Como guía, te compartimos una paleta de colores de referencia.
           </motion.p>
-
-          {/* FRASE */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            viewport={{ once: true }}
-            className="
-              mt-8 sm:mt-10
-              text-[#B89B5E]
-              text-xs sm:text-sm
-              tracking-[0.2em]
-              text-center
-            "
-          >
-            ✦ Elegancia • Glamour • Celebración ✦
-          </motion.div>
 
         </div>
 

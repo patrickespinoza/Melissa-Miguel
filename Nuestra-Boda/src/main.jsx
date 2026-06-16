@@ -6,7 +6,7 @@ import Portada from './portada'
 import Intinerario from './intinerario'
 import Generador from './pages/generador'
 
-const ruta = window.location.pathname
+const ruta = window.location.pathname.toLowerCase()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <main>

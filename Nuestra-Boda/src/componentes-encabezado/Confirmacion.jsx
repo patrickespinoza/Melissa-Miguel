@@ -62,7 +62,7 @@ const Confirmacion = () => {
     };
 
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbxklU9PTlqxkcu9pBUfWYhByQZ_7kJWuFENeeQhlEW-C6eh2cVbTK3z2AbMJiWVL1ME/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbz5LSVsOYtmJbA8IO4lBDo5VdfBdxVmgNFmpa5c5bkFW46WptGX3EoW_n0xA-ZaJQT1vQ/exec", {
         method: "POST",
         mode: "no-cors",
         headers: {

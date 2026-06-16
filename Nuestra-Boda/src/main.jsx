@@ -1,14 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+
 import Portada from './portada'
 import Intinerario from './intinerario'
+import Generador from './pages/generador'
+
+const ruta = window.location.pathname
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <main>
-    <div >
-      <Portada/>
-      <Intinerario/>
-    </div>
+    {ruta === "/generador" ? (
+      <Generador />
+    ) : (
+      <div>
+        <Portada />
+        <Intinerario />
+      </div>
+    )}
   </main>
 )

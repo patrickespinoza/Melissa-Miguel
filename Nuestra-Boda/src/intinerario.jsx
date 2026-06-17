@@ -43,7 +43,7 @@ export default function Itinerario() {
     className="w-full max-w-5xl object-cover"
     />
 
-  {/* Degradado elegante */} <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div> {/* Frase */} <div className="absolute bottom-10 md:bottom-16 px-8 text-center max-w-4xl"> <h2 className="font-playfair text-[#F4E681] text-4xl sm:text-5xl md:text-6xl mb-4"> Nuestro Hogar </h2> <div className="w-24 h-[2px] bg-[#C45A00] mx-auto mb-6"></div> <p className="text-white text-lg sm:text-xl md:text-2xl leading-relaxed font-light"> Construimos un hogar el día que decidimos compartir nuestros sueños. Hoy celebramos esa decisión. </p> </div>
+  {/* Degradado elegante */} <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div> {/* Frase */} <div className="absolute bottom-10 md:bottom-16 px-8 text-center max-w-4xl"> <h2 className="font-playfair text-[#F4E681] text-4xl sm:text-5xl md:text-6xl mb-4"> Nuestro Hogar </h2> <div className="w-24 h-[2px] bg-[#C45A00] mx-auto mb-6"></div> <p className="text-white text-lg sm:text-xl md:text-2xl leading-relaxed font-playfair"> Construimos un hogar el día que decidimos compartir nuestros sueños. Hoy celebramos esa decisión. </p> </div>
 
 </div>
 {/* Mesa de Regalos */}

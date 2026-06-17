@@ -25,7 +25,7 @@ export default function Portada() {
             pt-12
           "
         >
-          <p className="uppercase tracking-[0.35em] text-[#F4E681] text-xs mb-2 font-semibold">
+          <p className="uppercase tracking-[0.35em] text-[#F4E681] text-xs mb-1 font-semibold">
             Nuestra Boda
           </p>
 
@@ -47,11 +47,11 @@ export default function Portada() {
             Sábado
           </p>
 
-          <p className="mt-2 tracking-[0.12em] text-2xl font-playfair drop-shadow-md">
+          <p className="mt-1 tracking-[0.12em] text-2xl font-playfair drop-shadow-md">
             19 · 12 · 2026
           </p>
 
-          <p className="mt-2 tracking-[0.25em] text-[11px] uppercase text-white/85">
+          <p className="mt-1 tracking-[0.25em] text-[11px] uppercase text-white/85">
             Nos casamos
           </p>
         </div>

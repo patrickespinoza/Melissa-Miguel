@@ -33,7 +33,7 @@ export default function Portada() {
             Melissa
             <br />
 
-            <span className="font-[DancingScript] text-[#C45A00] text-5xl min-[390px]:text-6xl">
+            <span className="font-[DancingScript] text-[#C45A00] text-3xl min-[390px]:text-6xl">
               &
             </span>
 

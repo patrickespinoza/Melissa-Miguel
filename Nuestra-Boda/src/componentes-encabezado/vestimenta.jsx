@@ -55,7 +55,7 @@ const Vestimenta = () => {
             alt="Vestimenta"
             className="
               w-full h-full
-              object-cover
+              object-contain
               object-center
               bg-white
             "

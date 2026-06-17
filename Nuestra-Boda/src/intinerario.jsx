@@ -6,12 +6,13 @@ import Novios from "./componentes-encabezado/novios";
 import Regalos from "./componentes-encabezado/MesadeRegalo";
 import Confirmacion from "./componentes-encabezado/Confirmacion";
 import Contador from "./componentes-encabezado/Contador";
+import Musica from "./componentes-encabezado/Musica";
 
 export default function Itinerario() {
 
   return (
     <div>
-
+<Musica />
 {/* SECCIÓN VESTIMENTA */}
       <Novios />
       {/* SECCIÓN CELEBRACIONES */}
@@ -50,7 +51,7 @@ export default function Itinerario() {
 
     {/* SECCIÓN VESTIMENTA */}
           <Contador/>
-          
+
  {/* CONFIRMACION */}
     <Confirmacion/>
 

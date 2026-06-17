@@ -18,7 +18,6 @@ const Itinerario2 = () => {
 
   return (
     <div className="w-full bg-[#496985] py-20 px-6 flex items-center justify-center overflow-hidden">
-
       {/* CONTENEDOR */}
       <motion.div
         variants={fadeUp}
@@ -38,7 +37,6 @@ const Itinerario2 = () => {
           overflow-hidden
         "
       >
-
         <div className="absolute inset-0 bg-gradient-to-br from-[#F4E681]/20 via-transparent to-[#496985]/10 pointer-events-none"></div>
 
         {/* TÍTULO */}
@@ -49,11 +47,30 @@ const Itinerario2 = () => {
           viewport={{ once: true }}
           className="relative text-center"
         >
-          <p className="uppercase tracking-[0.25em] text-[#C45A00] text-sm font-semibold">
+          <p
+            className="
+              uppercase
+              tracking-[0.18em]
+              text-[#C45A00]
+              text-xs
+              sm:text-sm
+              font-playfair
+              font-semibold
+            "
+          >
             Nuestro Día
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-playfair text-[#496985] mt-4">
+          <h1
+            className="
+              text-4xl
+              sm:text-5xl
+              md:text-6xl
+              font-playfair
+              text-[#496985]
+              mt-4
+            "
+          >
             Itinerario
           </h1>
 
@@ -73,8 +90,6 @@ const Itinerario2 = () => {
             items-center
           "
         >
-
-
           {/* TARJETA */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -92,31 +107,57 @@ const Itinerario2 = () => {
               text-center
             "
           >
-
             <div className="absolute top-5 left-1/2 -translate-x-1/2 w-24 h-[2px] bg-[#C45A00]"></div>
 
             <img
               src="/arco-de-la-boda.png"
-              alt="Ceremonia Civil"
+              alt="Ceremonia civil"
               className="h-20 w-20 md:h-24 md:w-24 mx-auto mt-6"
             />
 
-            <h2 className="mt-6 text-3xl sm:text-4xl font-playfair text-[#496985]">
-              Ceremonia Civil
+            <h2
+              className="
+                mt-6
+                text-3xl
+                sm:text-4xl
+                font-playfair
+                text-[#496985]
+              "
+            >
+              Ceremonia civil
             </h2>
 
-            <p className="mt-4 text-[#C45A00] font-[DancingScript] text-2xl sm:text-3xl">
-              2:30 pm
+            <p
+              className="
+                mt-4
+                text-[#C45A00]
+                font-playfair
+                text-2xl
+                sm:text-3xl
+              "
+            >
+              2:30 p.m.
             </p>
 
-            <p className="mt-5 text-[#496985]/75 text-base sm:text-lg leading-relaxed max-w-md mx-auto">
-              Se les agradece la puntualidad para poder iniciar la ceremonia
+            <p
+              className="
+                mt-5
+                text-[#496985]/75
+                text-base
+                sm:text-lg
+                leading-relaxed
+                max-w-md
+                mx-auto
+                font-playfair
+              "
+            >
+              Les agradecemos su puntualidad para poder iniciar la ceremonia
               acompañados de nuestros seres queridos.
             </p>
 
             <div className="w-24 h-[2px] bg-[#C45A00] mx-auto mt-8"></div>
-
           </motion.div>
+
           {/* FOTO */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -134,13 +175,11 @@ const Itinerario2 = () => {
           >
             <img
               src="/03.JPEG"
-              alt="Ceremonia Civil"
+              alt="Ceremonia civil"
               className="w-full h-full object-cover"
             />
           </motion.div>
-
         </motion.div>
-
       </motion.div>
     </div>
   );

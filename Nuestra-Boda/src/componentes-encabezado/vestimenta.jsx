@@ -17,8 +17,7 @@ const Vestimenta = () => {
   };
 
   return (
-    <div className="w-full bg-[#496985] py-16 sm:py-20 px-4 sm:px-6 flex items-center justify-center overflow-hidden">
-
+    <div className="w-full bg-[#496985] py-12 sm:py-20 px-3 sm:px-6 flex items-center justify-center overflow-hidden">
       <motion.div
         variants={fadeUp}
         initial="hidden"
@@ -27,16 +26,15 @@ const Vestimenta = () => {
         className="
           relative max-w-6xl w-full
           bg-white
-          rounded-tl-[3rem] sm:rounded-tl-[4rem]
-          rounded-br-[3rem] sm:rounded-br-[4rem]
+          rounded-tl-[2.5rem] sm:rounded-tl-[4rem]
+          rounded-br-[2.5rem] sm:rounded-br-[4rem]
           rounded-tr-[1rem]
           rounded-bl-[1rem]
           shadow-[0_15px_50px_rgba(0,0,0,0.12)]
           overflow-hidden
-          grid grid-cols-1 lg:grid-cols-2
+          grid grid-cols-2
         "
       >
-
         {/* IMAGEN */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
@@ -45,30 +43,24 @@ const Vestimenta = () => {
           viewport={{ once: true }}
           className="
             relative
-            h-[420px]
-            min-[390px]:h-[460px]
-            sm:h-[520px]
-            md:h-[600px]
-            lg:h-full
-            min-h-[420px]
+            h-full
+            min-h-[520px]
+            sm:min-h-[560px]
+            md:min-h-[600px]
           "
         >
-
           <img
             src="/Vestimenta.JPEG"
             alt="Vestimenta"
             className="
               w-full h-full
-              object-contain
-              lg:object-cover
+              object-cover
               object-center
               bg-white
             "
           />
 
-          {/* Overlay elegante */}
-          <div className="absolute inset-0 bg-[#496985]/5 lg:bg-[#496985]/10"></div>
-
+          <div className="absolute inset-0 bg-[#496985]/10"></div>
         </motion.div>
 
         {/* TEXTO */}
@@ -76,23 +68,25 @@ const Vestimenta = () => {
           className="
             flex flex-col items-center justify-center
             text-center
-            p-8
-            sm:p-12
+            px-4 py-10
+            min-[390px]:px-5
+            sm:p-10
             lg:p-16
           "
         >
-
           <motion.p
             initial={{ opacity: 0, letterSpacing: "0.5em" }}
-            whileInView={{ opacity: 1, letterSpacing: "0.2em" }}
+            whileInView={{ opacity: 1, letterSpacing: "0.16em" }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
             className="
               uppercase
-              text-[11px]
+              text-[9px]
+              min-[390px]:text-[10px]
               sm:text-sm
-              tracking-[0.2em]
+              tracking-[0.16em]
               text-[#C45A00]
+              font-playfair
               font-semibold
             "
           >
@@ -105,25 +99,26 @@ const Vestimenta = () => {
             transition={{ duration: 1, delay: 0.2 }}
             viewport={{ once: true }}
             className="
-              text-3xl
+              font-playfair
+              text-[#496985]
+              mt-4
+              leading-tight
+              text-xl
+              min-[390px]:text-2xl
               sm:text-4xl
               md:text-5xl
               lg:text-6xl
-              font-playfair
-              text-[#496985]
-              mt-5
-              leading-tight
             "
           >
-            Vestimenta Formal y Elegante
+            Cóctel de día
           </motion.h1>
 
           <motion.div
             initial={{ width: 0 }}
-            whileInView={{ width: "6rem" }}
+            whileInView={{ width: "4.5rem" }}
             transition={{ duration: 1, delay: 0.4 }}
             viewport={{ once: true }}
-            className="h-[2px] bg-[#C45A00] mt-6"
+            className="h-[2px] bg-[#C45A00] mt-5"
           />
 
           <motion.p
@@ -132,24 +127,24 @@ const Vestimenta = () => {
             transition={{ duration: 1, delay: 0.6 }}
             viewport={{ once: true }}
             className="
-              mt-6 sm:mt-8
-              text-base
+              mt-5
+              text-[13px]
+              min-[390px]:text-sm
               sm:text-lg
               md:text-xl
               text-[#496985]/80
               leading-relaxed
               max-w-md
-              font-[DancingScript]
+              font-playfair
             "
           >
-            No es necesario portar traje completo ni vestido de gala.
-            Te invitamos a vestir de manera formal y elegante.
-            Reservamos los tonos blanco, negro y similares.
-            Como guía, te compartimos una paleta de colores de referencia.
+            Queremos celebrar con un ambiente elegante y relajado. Te invitamos
+            a vestir de manera formal, privilegiando prendas ligeras y cómodas. No
+            es necesario traje completo ni vestido de gala.
+            Te pedimos evitar el blanco, negro y tonalidades similares. Como
+            referencia, compartimos una paleta de colores sugeridos.
           </motion.p>
-
         </div>
-
       </motion.div>
     </div>
   );

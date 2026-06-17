@@ -6,7 +6,7 @@ const Regalos = () => {
   const [copiado, setCopiado] = useState(false);
 
   const copiarMesa = () => {
-    navigator.clipboard.writeText("123456789");
+    navigator.clipboard.writeText("52017657");
 
     setCopiado(true);
 
@@ -18,59 +18,110 @@ const Regalos = () => {
   return (
     <>
       <section className="relative bg-[#496985] py-24 px-6 overflow-hidden">
-
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="uppercase tracking-[0.35em] text-[#F4E681] text-xs">
+        <div className="relative z-10 max-w-6xl mx-auto text-center">
+          <p className="uppercase tracking-[0.18em] text-[#F4E681] text-xs sm:text-sm font-playfair font-semibold">
             Regalos
           </p>
 
-          <h1 className="font-cursiveDancing text-white text-5xl mt-4">
+          <h1 className="font-playfair text-white text-4xl sm:text-5xl md:text-6xl mt-4">
             Mesa de Regalos
           </h1>
 
-          <img
-            className="h-auto w-40 mx-auto my-6"
-            src="/Sobre.png"
-            alt="regalo"
-          />
-
           <div className="w-24 h-[2px] bg-[#C45A00] mx-auto mt-6"></div>
 
-          <p
-            className="
-              mt-10
-              text-lg
-              md:text-xl
-              text-white/90
-              leading-relaxed
-              max-w-3xl
-              mx-auto
-            "
-          >
-            Tu presencia es nuestro mejor regalo.
-            <br />
-            Si deseas tener un detalle con nosotros, hemos preparado una mesa de
-            regalos en Liverpool para comenzar esta nueva etapa juntos o bien una Lluvia de sobres.
+          <p className="mt-8 text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto font-playfair">
+            Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con
+            nosotros, te compartimos dos opciones para acompañarnos en esta nueva
+            etapa.
           </p>
 
-          <button
-            onClick={() => setMostrarModal(true)}
-            className="
-              mt-12
-              bg-[#C45A00]
-              hover:bg-[#a94d00]
-              text-white
-              px-10
-              py-4
-              rounded-full
-              shadow-xl
-              transition-all
-              duration-300
-              hover:scale-105
-            "
-          >
-            Ver Mesa de Regalos
-          </button>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {/* OPCIÓN 1: MESA DE REGALOS */}
+            <motion.div
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.3 }}
+              className="
+                bg-white/10
+                border border-[#F4E681]/60
+                rounded-tl-[3rem]
+                rounded-br-[3rem]
+                rounded-tr-[1rem]
+                rounded-bl-[1rem]
+                p-8
+                text-center
+                backdrop-blur-md
+                shadow-[0_15px_50px_rgba(0,0,0,0.15)]
+              "
+            >
+              <img
+                src="/RegaloBlanco.png"
+                alt="Mesa de regalos"
+                className="w-24 h-24 object-contain mx-auto mb-6"
+              />
+
+              <h2 className="font-playfair text-[#F4E681] text-2xl sm:text-3xl">
+                Mesa de Regalos
+              </h2>
+
+              <p className="mt-4 text-white/85 text-sm sm:text-base leading-relaxed font-playfair">
+                Hemos preparado una mesa de regalos en Liverpool para comenzar
+                esta nueva etapa juntos.
+              </p>
+
+              <button
+                onClick={() => setMostrarModal(true)}
+                className="
+                  mt-8
+                  bg-[#C45A00]
+                  hover:bg-[#a94d00]
+                  text-white
+                  px-8
+                  py-3
+                  rounded-full
+                  shadow-xl
+                  transition-all
+                  duration-300
+                  hover:scale-105
+                  font-playfair
+                "
+              >
+                Ver Mesa de Regalos
+              </button>
+            </motion.div>
+
+            {/* OPCIÓN 2: LLUVIA DE SOBRES */}
+            <motion.div
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.3 }}
+              className="
+                bg-white/10
+                border border-[#F4E681]/60
+                rounded-tl-[3rem]
+                rounded-br-[3rem]
+                rounded-tr-[1rem]
+                rounded-bl-[1rem]
+                p-8
+                text-center
+                backdrop-blur-md
+                shadow-[0_15px_50px_rgba(0,0,0,0.15)]
+              "
+            >
+              <img
+                src="/Sobre.png"
+                alt="Lluvia de sobres"
+                className="w-24 h-24 object-contain mx-auto mb-6"
+              />
+
+              <h2 className="font-playfair text-[#F4E681] text-2xl sm:text-3xl">
+                Lluvia de Sobres
+              </h2>
+
+              <p className="mt-4 text-white/85 text-sm sm:text-base leading-relaxed font-playfair">
+                O bien, una lluvia de sobres será recibida con mucho cariño el
+                día de nuestra celebración.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -101,8 +152,6 @@ const Regalos = () => {
               transition={{ duration: 0.4 }}
               className="relative"
             >
-
-              {/* Tarjeta Liverpool */}
               <div
                 className="
                   relative
@@ -123,7 +172,7 @@ const Regalos = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#F4E681]/25 via-white to-[#496985]/10"></div>
 
                 <div className="relative">
-                  <p className="uppercase tracking-[0.35em] text-[#C45A00] text-xs">
+                  <p className="uppercase tracking-[0.18em] text-[#C45A00] text-xs font-playfair font-semibold">
                     Liverpool
                   </p>
 
@@ -133,7 +182,7 @@ const Regalos = () => {
 
                   <div className="w-20 h-[2px] bg-[#C45A00] mx-auto mt-5"></div>
 
-                  <p className="mt-6 text-[#496985]/75 text-sm sm:text-base leading-relaxed">
+                  <p className="mt-6 text-[#496985]/75 text-sm sm:text-base leading-relaxed font-playfair">
                     Número de evento
                   </p>
 
@@ -154,6 +203,7 @@ const Regalos = () => {
                       hover:scale-105
                       transition-all
                       duration-300
+                      font-playfair
                     "
                   >
                     {copiado ? "Número copiado" : "Copiar número"}
@@ -170,6 +220,7 @@ const Regalos = () => {
                       underline
                       underline-offset-4
                       text-sm
+                      font-playfair
                     "
                   >
                     Ir a Liverpool
@@ -177,7 +228,6 @@ const Regalos = () => {
                 </div>
               </div>
 
-              {/* Cerrar */}
               <button
                 onClick={() => setMostrarModal(false)}
                 className="

@@ -10,26 +10,29 @@ const Novios = () => {
         transition={{ duration: 1.2 }}
         viewport={{ once: true }}
         className="
-          relative
-          max-w-6xl
-          w-full
-          min-h-[720px]
-          md:h-[720px]
-          bg-white
-          rounded-tl-[2.5rem] sm:rounded-tl-[4rem]
-          rounded-br-[2.5rem] sm:rounded-br-[4rem]
-          rounded-tr-[1rem]
-          rounded-bl-[1rem]
-          shadow-[0_15px_50px_rgba(0,0,0,0.12)]
-          px-6 py-10
-          sm:px-12
-          lg:px-16
-          text-center
-          overflow-hidden
-          flex
-          flex-col
-          justify-center
-        "
+  relative
+  max-w-6xl
+  w-full
+  h-auto
+  md:h-[720px]
+  bg-white
+  rounded-tl-[2.5rem]
+  sm:rounded-tl-[4rem]
+  rounded-br-[2.5rem]
+  sm:rounded-br-[4rem]
+  rounded-tr-[1rem]
+  rounded-bl-[1rem]
+  shadow-[0_15px_50px_rgba(0,0,0,0.12)]
+  px-6
+  py-10
+  sm:px-12
+  lg:px-16
+  text-center
+  overflow-hidden
+  flex
+  flex-col
+  justify-center
+"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#F4E681]/20 via-transparent to-[#AFCBE8]/20 pointer-events-none"></div>
 

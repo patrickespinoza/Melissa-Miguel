@@ -12,14 +12,14 @@ const Celebracion = ({
   titulo,
 }) => {
   return (
-    <div className="w-full bg-[#496985] py-12 sm:py-20 px-3 sm:px-6 flex flex-col items-center justify-center">
+    <div className="w-full bg-[#496985] py-10 sm:py-20 px-3 sm:px-6 flex flex-col items-center justify-center">
       {/* FECHA */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="text-center mb-10"
+        className="text-center mb-8 sm:mb-10"
       >
         <motion.p
           initial={{ opacity: 0, letterSpacing: "0.6em" }}
@@ -45,8 +45,9 @@ const Celebracion = ({
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
           className="
-            mt-3
-            text-6xl
+            mt-2
+            sm:mt-3
+            text-5xl
             sm:text-7xl
             md:text-8xl
             font-playfair
@@ -65,11 +66,12 @@ const Celebracion = ({
           viewport={{ once: true }}
           className="
             text-[#F4E681]
-            text-xl
+            text-lg
             sm:text-2xl
             font-playfair
             tracking-[0.18em]
-            mt-3
+            mt-2
+            sm:mt-3
           "
         >
           {mesAnio}
@@ -86,7 +88,8 @@ const Celebracion = ({
           relative
           max-w-6xl
           w-full
-          min-h-[720px]
+
+          h-auto
           md:h-[720px]
 
           bg-white
@@ -103,8 +106,10 @@ const Celebracion = ({
           shadow-[0_15px_50px_rgba(0,0,0,0.12)]
           border border-[#F4E681]
 
-          px-6 py-10
+          px-6
+          py-9
           sm:px-12
+          sm:py-12
           lg:px-16
 
           overflow-hidden
@@ -119,7 +124,7 @@ const Celebracion = ({
           whileInView={{ width: "7rem" }}
           transition={{ duration: 1, delay: 0.6 }}
           viewport={{ once: true }}
-          className="absolute top-6 left-1/2 -translate-x-1/2 h-[2px] bg-[#C45A00]"
+          className="absolute top-5 sm:top-6 left-1/2 -translate-x-1/2 h-[2px] bg-[#C45A00]"
         />
 
         <div className="text-center">
@@ -145,11 +150,11 @@ const Celebracion = ({
             whileInView={{ width: "5rem" }}
             transition={{ duration: 1, delay: 0.7 }}
             viewport={{ once: true }}
-            className="h-[2px] mx-auto bg-[#C45A00] mt-5"
+            className="h-[2px] mx-auto bg-[#C45A00] mt-4 sm:mt-5"
           />
         </div>
 
-        <div className="mt-12 flex flex-col items-center text-center space-y-10">
+        <div className="mt-8 sm:mt-12 flex flex-col items-center text-center space-y-7 sm:space-y-10">
           {/* HORA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -178,7 +183,8 @@ const Celebracion = ({
                 md:text-3xl
                 font-playfair
                 text-[#496985]
-                mt-3
+                mt-2
+                sm:mt-3
               "
             >
               {hora}
@@ -213,7 +219,8 @@ const Celebracion = ({
                 md:text-3xl
                 font-playfair
                 text-[#496985]
-                mt-3
+                mt-2
+                sm:mt-3
               "
             >
               {lugar}
@@ -223,7 +230,8 @@ const Celebracion = ({
               className="
                 font-playfair
                 text-[#496985]/70
-                mt-4
+                mt-3
+                sm:mt-4
                 leading-relaxed
                 text-sm
                 sm:text-lg
@@ -267,7 +275,7 @@ const Celebracion = ({
           whileInView={{ width: "7rem" }}
           transition={{ duration: 1, delay: 1 }}
           viewport={{ once: true }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 h-[2px] bg-[#C45A00]"
+          className="absolute bottom-5 sm:bottom-6 left-1/2 -translate-x-1/2 h-[2px] bg-[#C45A00]"
         />
       </motion.div>
     </div>

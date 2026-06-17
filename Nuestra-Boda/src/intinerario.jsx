@@ -44,47 +44,7 @@ export default function Itinerario() {
     className="w-full max-w-5xl object-cover"
   />
 
-  {/* Degradado elegante */}
-<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-{/* Frase */}
-<div className="absolute bottom-10 md:bottom-16 px-8 text-center max-w-4xl left-1/2 -translate-x-1/2">
-
-  <h2
-    className="
-      font-playfair
-      text-[#F4E681]
-      text-3xl
-      sm:text-4xl
-      md:text-5xl
-      lg:text-6xl
-      leading-tight
-      drop-shadow-lg
-    "
-  >
-    Nuestro Hogar
-  </h2>
-
-  <div className="w-24 h-[2px] bg-[#C45A00] mx-auto my-5"></div>
-
-  <p
-    className="
-      font-playfair
-      text-white
-      text-base
-      sm:text-lg
-      md:text-xl
-      lg:text-2xl
-      leading-relaxed
-      max-w-3xl
-      mx-auto
-    "
-  >
-    Construimos un hogar el día que decidimos compartir nuestros sueños.
-    Hoy celebramos esa decisión.
-  </p>
-
-</div>
+  {/* Degradado elegante */} <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div> {/* Frase */} <div className="absolute bottom-10 md:bottom-16 px-8 text-center max-w-4xl"> <h2 className="font-[DancingScript] text-[#F4E681] text-4xl sm:text-5xl md:text-6xl mb-4"> Nuestro Hogar </h2> <div className="w-24 h-[2px] bg-[#C45A00] mx-auto mb-6"></div> <p className="text-white text-lg sm:text-xl md:text-2xl leading-relaxed font-light"> Construimos un hogar el día que decidimos compartir nuestros sueños. Hoy celebramos esa decisión. </p> </div>
 
 </div>
 {/* Mesa de Regalos */}

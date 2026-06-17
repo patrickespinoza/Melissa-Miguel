@@ -32,7 +32,7 @@ const Vestimenta = () => {
           rounded-bl-[1rem]
           shadow-[0_15px_50px_rgba(0,0,0,0.12)]
           overflow-hidden
-          grid grid-cols-2
+          grid grid-cols-1 md:grid-cols-2
         "
       >
         {/* IMAGEN */}
@@ -43,9 +43,10 @@ const Vestimenta = () => {
           viewport={{ once: true }}
           className="
             relative
-            h-full
-            min-h-[520px]
-            sm:min-h-[560px]
+            order-2 md:order-1
+            h-[420px]
+            sm:h-[520px]
+            md:h-full
             md:min-h-[600px]
           "
         >
@@ -66,10 +67,10 @@ const Vestimenta = () => {
         {/* TEXTO */}
         <div
           className="
+            order-1 md:order-2
             flex flex-col items-center justify-center
             text-center
-            px-4 py-10
-            min-[390px]:px-5
+            px-5 py-12
             sm:p-10
             lg:p-16
           "
@@ -81,8 +82,7 @@ const Vestimenta = () => {
             viewport={{ once: true }}
             className="
               uppercase
-              text-[9px]
-              min-[390px]:text-[10px]
+              text-[10px]
               sm:text-sm
               tracking-[0.16em]
               text-[#C45A00]
@@ -103,8 +103,7 @@ const Vestimenta = () => {
               text-[#496985]
               mt-4
               leading-tight
-              text-xl
-              min-[390px]:text-2xl
+              text-3xl
               sm:text-4xl
               md:text-5xl
               lg:text-6xl
@@ -128,8 +127,7 @@ const Vestimenta = () => {
             viewport={{ once: true }}
             className="
               mt-5
-              text-[13px]
-              min-[390px]:text-sm
+              text-sm
               sm:text-lg
               md:text-xl
               text-[#496985]/80
@@ -139,10 +137,10 @@ const Vestimenta = () => {
             "
           >
             Queremos celebrar con un ambiente elegante y relajado. Te invitamos
-            a vestir de manera formal, privilegiando prendas ligeras y cómodas. No
-            es necesario traje completo ni vestido de gala.
-            Te pedimos evitar el blanco, negro y tonalidades similares. Como
-            referencia, compartimos una paleta de colores sugeridos.
+            a vestir de manera formal, privilegiando prendas ligeras y cómodas.
+            No es necesario traje completo ni vestido de gala. Te pedimos evitar
+            el blanco, negro y tonalidades similares. Como referencia,
+            compartimos una paleta de colores sugeridos.
           </motion.p>
         </div>
       </motion.div>
